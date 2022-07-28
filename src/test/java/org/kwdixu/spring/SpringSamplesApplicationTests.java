@@ -1,10 +1,9 @@
 package org.kwdixu.spring;
 
 import org.junit.jupiter.api.Test;
-import org.kwdixu.spring.util.CommonEvent;
-import org.kwdixu.spring.util.SpringContextUtil;
+import org.kwdixu.spring.event.CommonEvent;
+import org.kwdixu.spring.spring_helper.SpringContextUtil;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationEventPublisher;
 
 @SpringBootTest
 class SpringSamplesApplicationTests {

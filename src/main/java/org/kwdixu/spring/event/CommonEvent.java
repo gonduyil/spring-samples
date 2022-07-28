@@ -1,4 +1,4 @@
-package org.kwdixu.spring.util;
+package org.kwdixu.spring.event;
 
 import org.springframework.context.ApplicationEvent;
 

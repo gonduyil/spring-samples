@@ -1,4 +1,4 @@
-package org.kwdixu.spring.util;
+package org.kwdixu.spring.spring_helper;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
