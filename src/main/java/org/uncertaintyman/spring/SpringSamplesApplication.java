@@ -1,6 +1,6 @@
-package org.kwdixu.spring;
+package org.uncertaintyman.spring;
 
-import org.kwdixu.spring.cmd_router.CmdMappingBeanPostProcessor;
+import org.uncertaintyman.spring.cmd_router.CmdMappingBeanPostProcessor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

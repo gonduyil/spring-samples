@@ -1,4 +1,4 @@
-package org.kwdixu.spring.util;
+package org.uncertaintyman.spring.util;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

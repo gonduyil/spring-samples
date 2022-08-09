@@ -1,7 +1,7 @@
-package org.kwdixu.spring.cmd_router.samples;
+package org.uncertaintyman.spring.cmd_router.samples;
 
-import org.kwdixu.spring.cmd_router.CmdMapping;
-import org.kwdixu.spring.cmd_router.CmdRouter;
+import org.uncertaintyman.spring.cmd_router.CmdMapping;
+import org.uncertaintyman.spring.cmd_router.CmdRouter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

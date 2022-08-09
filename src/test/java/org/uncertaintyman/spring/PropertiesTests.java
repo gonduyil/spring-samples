@@ -1,4 +1,4 @@
-package org.kwdixu.spring;
+package org.uncertaintyman.spring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;

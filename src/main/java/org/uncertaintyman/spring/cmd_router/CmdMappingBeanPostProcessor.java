@@ -1,4 +1,4 @@
-package org.kwdixu.spring.cmd_router;
+package org.uncertaintyman.spring.cmd_router;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

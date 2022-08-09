@@ -1,4 +1,4 @@
-package org.kwdixu.spring.event;
+package org.uncertaintyman.spring.event;
 
 import org.springframework.context.ApplicationEvent;
 

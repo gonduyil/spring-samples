@@ -1,8 +1,8 @@
-package org.kwdixu.spring;
+package org.uncertaintyman.spring;
 
 import org.junit.jupiter.api.Test;
-import org.kwdixu.spring.event.CommonEvent;
-import org.kwdixu.spring.spring_helper.SpringContextUtil;
+import org.uncertaintyman.spring.event.CommonEvent;
+import org.uncertaintyman.spring.spring_helper.SpringContextUtil;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
