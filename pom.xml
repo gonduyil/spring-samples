@@ -9,7 +9,7 @@ http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
         <version>2.7.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.kwdixu</groupId>
+    <groupId>org.uncertaintyman</groupId>
     <artifactId>spring-samples</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-samples</name>

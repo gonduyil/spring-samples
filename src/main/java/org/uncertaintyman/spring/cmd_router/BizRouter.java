@@ -1,15 +1,14 @@
 package org.uncertaintyman.spring.cmd_router;
 
+import org.springframework.stereotype.Component;
 
 import java.lang.annotation.*;
 
-@Target({ElementType.TYPE, ElementType.METHOD})
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface CmdMapping {
+@Component
+public @interface BizRouter {
 
-    /**
-     * cmd
-     */
-    String value();
+
 }

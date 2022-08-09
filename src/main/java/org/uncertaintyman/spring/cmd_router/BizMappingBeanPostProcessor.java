@@ -17,17 +17,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class CmdMappingBeanPostProcessor implements BeanPostProcessor {
+public class BizMappingBeanPostProcessor implements BeanPostProcessor {
 
-    private static final Logger log = LoggerFactory.getLogger(CmdMappingBeanPostProcessor.class);
+    private static final Logger log = LoggerFactory.getLogger(BizMappingBeanPostProcessor.class);
 
-    private static Map<String, CmdMethod> cmdMethodMap = new HashMap<>();
+    private static Map<String, BizMethod> cmdMethodMap = new HashMap<>();
 
     public static Object execute(String cmd, Object param){
-        CmdMethod cmdMethod = cmdMethodMap.get(cmd);
-        Object bean = cmdMethod.getBean();
+        BizMethod bizMethod = cmdMethodMap.get(cmd);
+        Object bean = bizMethod.getBean();
         try {
-            return cmdMethod.getMethod().invoke(bean, param);
+            return bizMethod.getMethod().invoke(bean, param);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -44,25 +44,25 @@ public class CmdMappingBeanPostProcessor implements BeanPostProcessor {
 
         Class<?> targetClass = AopProxyUtils.ultimateTargetClass(bean);
 
-        if (AnnotationUtils.isCandidateClass(targetClass, Arrays.asList(CmdRouter.class))) {
+        if (AnnotationUtils.isCandidateClass(targetClass, Arrays.asList(BizRouter.class))) {
 
-            Map<Method, CmdMapping> annotatedMethods = null;
+            Map<Method, BizMapping> annotatedMethods = null;
             try {
 
                 // CmdMethod需要
                 annotatedMethods = MethodIntrospector.selectMethods(targetClass,
-                        (MethodIntrospector.MetadataLookup<CmdMapping>) method ->
-                                AnnotatedElementUtils.findMergedAnnotation(method, CmdMapping.class));
+                        (MethodIntrospector.MetadataLookup<BizMapping>) method ->
+                                AnnotatedElementUtils.findMergedAnnotation(method, BizMapping.class));
 
 
                 annotatedMethods.forEach((method, annotation) -> {
                     log.info("methodName:{}|annotationValue:{}", method.getName(), annotation.value());
 
-                    CmdMethod cmdMethod = CmdMethod.CmdMethodBuilder.aCmdMethod()
+                    BizMethod bizMethod = BizMethod.CmdMethodBuilder.aCmdMethod()
                             .withMethod(method)
                             .withBean(bean)
                             .build();
-                    cmdMethodMap.put(annotation.value(), cmdMethod);
+                    cmdMethodMap.put(annotation.value(), bizMethod);
                 });
 
 //                annotatedMethods.keySet().forEach(a -> {

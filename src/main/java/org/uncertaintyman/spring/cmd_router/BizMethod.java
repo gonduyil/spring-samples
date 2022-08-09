@@ -2,7 +2,7 @@ package org.uncertaintyman.spring.cmd_router;
 
 import java.lang.reflect.Method;
 
-public class CmdMethod {
+public class BizMethod {
 
     private Object bean;
 
@@ -47,11 +47,11 @@ public class CmdMethod {
             return this;
         }
 
-        public CmdMethod build() {
-            CmdMethod cmdMethod = new CmdMethod();
-            cmdMethod.setBean(bean);
-            cmdMethod.setMethod(method);
-            return cmdMethod;
+        public BizMethod build() {
+            BizMethod bizMethod = new BizMethod();
+            bizMethod.setBean(bean);
+            bizMethod.setMethod(method);
+            return bizMethod;
         }
     }
 }
