@@ -9,6 +9,9 @@ import java.util.Objects;
 public class EnvHelper {
 
 
+    /**
+     * 用以读取当前环境
+     */
     @Value("${spring.profiles.active}")
     private String active;
 
