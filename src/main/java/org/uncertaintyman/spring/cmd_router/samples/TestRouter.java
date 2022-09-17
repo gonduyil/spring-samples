@@ -18,7 +18,8 @@ public class TestRouter {
 
     @BizMapping("onClass")
     public String onClassCmd(String params) {
-        logger.info("onClassCmd|params:{}", params);
+     //   logger.info("onClassCmd|params:{}", params);
+        //System.out.println(1);
         return "getTest123456";
     }
 

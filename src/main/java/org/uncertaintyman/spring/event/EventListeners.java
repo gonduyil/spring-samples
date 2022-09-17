@@ -1,6 +1,7 @@
 package org.uncertaintyman.spring.event;
 
 import org.springframework.context.event.EventListener;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 @Component

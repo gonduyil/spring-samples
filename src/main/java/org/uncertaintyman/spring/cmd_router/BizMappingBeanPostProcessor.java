@@ -56,8 +56,10 @@ public class BizMappingBeanPostProcessor implements BeanPostProcessor {
 
 
                 annotatedMethods.forEach((method, annotation) -> {
+
                     log.info("methodName:{}|annotationValue:{}", method.getName(), annotation.value());
 
+                    method.setAccessible(true);
                     BizMethod bizMethod = BizMethod.CmdMethodBuilder.aCmdMethod()
                             .withMethod(method)
                             .withBean(bean)
